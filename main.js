@@ -24,3 +24,13 @@ function tinhTongDuong() {
     document.querySelector("#ketQuaTongDuong").innerHTML = "Tổng số dương: " + tongSoDuong;
 }
 
+// Ex 02
+function demSoDuong() {
+    var count = 0;
+    for (i = 0; i < numArr.length; i++) {
+        if (numArr[i] >= 0) {
+            count+= 1;
+        }
+    }
+    document.querySelector("#ketQuaSoDuong").innerHTML = "Số dương: " + count;
+}
