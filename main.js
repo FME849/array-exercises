@@ -35,6 +35,7 @@ function demSoDuong() {
     document.querySelector("#ketQuaSoDuong").innerHTML = "Số dương: " + count;
 }
 
+// Ex 03
 function timSoNhoNhat() {
     var soMin = numArr[0];
     for (i = 1; i < numArr.length; i++) {
@@ -43,4 +44,46 @@ function timSoNhoNhat() {
         }
     }
     document.querySelector("#soNhoNhat").innerHTML = "Số nhỏ nhất: " + soMin;
+}
+
+// Ex 04
+// Cách 1:
+// function timSoDuongNhoNhat() {
+//     var soMin = 0;
+//     for (i = 0; i < numArr.length; i++) {
+//         if (numArr[i] == 0) {
+//             document.querySelector("#soDuongNhoNhat").innerHTML = "Số dương nhỏ nhất: " + numArr[i];
+//             return;
+//         } else if (numArr[i] > 0) {
+//             if (soMin == 0) {
+//                 soMin = numArr[i];
+//             } else if (soMin > numArr[i]) {
+//                 soMin = numArr[i];
+//             }
+//         } else if (i == (numArr.length - 1) && soMin == 0){
+//             document.querySelector("#soDuongNhoNhat").innerHTML = "Không có số dương trong mảng";
+//             return;
+//         }
+//     }
+//     document.querySelector("#soDuongNhoNhat").innerHTML = "Số dương nhỏ nhất: " + soMin;
+// }
+// Cách 2:
+function timSoDuongNhoNhat() {
+    var newArr = [];
+    for (var i = 0; i < numArr.length; i++) {
+        if (numArr[i] >= 0) {
+            newArr.push(numArr[i]);
+        }
+    }
+    if (newArr.length != 0) {
+        var soMin = newArr[0];
+        for (var j = 1; j < newArr.length; j++) {
+            if (soMin > newArr[i]) {
+                soMin = newArr[i];
+            }
+        }
+        document.querySelector("#soDuongNhoNhat").innerHTML = "Số dương nhỏ nhất: " + soMin;
+    } else {
+        document.querySelector("#soDuongNhoNhat").innerHTML = "Không có số dương trong mảng";
+    }
 }
