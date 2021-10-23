@@ -13,3 +13,14 @@ function themPhanTu() {
 }
 document.querySelector("#themPhanTuMang").onclick = themPhanTu;
 
+// Ex 01
+function tinhTongDuong() {
+    var tongSoDuong = 0;
+    for (i = 0; i < numArr.length; i++) {
+        if (numArr[i] >= 0) {
+            tongSoDuong+= numArr[i];
+        }
+    }
+    document.querySelector("#ketQuaTongDuong").innerHTML = "Tổng số dương: " + tongSoDuong;
+}
+
