@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Array Exercises</title>
+</head>
+
+<body class="my-5">
+    <form class="container mb-5">
+        <div class="row mb-2">
+            <div class="col-4">
+                <input type="number" class="form-control" id="phanTuMang" placeholder="Nhập số n">
+            </div>
+            <div class="col-2">
+                <button class="btn btn-primary" type="button" id="themPhanTuMang">Thêm số</button>
+            </div>
+        </div>
+        <div class="alert alert-success" id="mangArray">
+            Mảng: 
+        </div>
+    </form>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="excercise-01-tab" data-toggle="pill" href="#exercise-01" role="tab">Bài 1</a>
+                    <a class="nav-link" id="excercise-02-tab" data-toggle="pill" href="#exercise-02" role="tab">Bài 2</a>
+                    <a class="nav-link" id="exercise-03-tab" data-toggle="pill" href="#exercise-03" role="tab">Bài 3</a>
+                    <a class="nav-link" id="exercise-04-tab" data-toggle="pill" href="#exercise-04" role="tab">Bài 4</a>
+                    <a class="nav-link" id="exercise-05-tab" data-toggle="pill" href="#exercise-05" role="tab">Bài 5</a>
+                    <a class="nav-link" id="exercise-06-tab" data-toggle="pill" href="#exercise-06" role="tab">Bài 6</a>
+                    <a class="nav-link" id="exercise-07-tab" data-toggle="pill" href="#exercise-07" role="tab">Bài 7</a>
+                    <a class="nav-link" id="exercise-08-tab" data-toggle="pill" href="#exercise-08" role="tab">Bài 8</a>
+                    <a class="nav-link" id="exercise-09-tab" data-toggle="pill" href="#exercise-09" role="tab">Bài 9</a>
+                    <a class="nav-link" id="exercise-10-tab" data-toggle="pill" href="#exercise-10" role="tab">Bài 10</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="exercise-01" role="tabpanel">
+                        <h2>Tổng số dương</h2>
+                        <form>
+                            <button class="btn btn-primary d-block my-2" id="tinhTongDuong" type="button">Xem Kết Quả</button>
+                            <div class="alert alert-success py-2">
+                                <p id="ketQuaTongDuong"></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="exercise-02" role="tabpanel">
+                        <h2>Đếm số chia hết cho 3</h2>
+                        <form>
+                            <button id="demSo" type="button" class="btn btn-primary mb-2">Xem Kết Quả</button>
+                            <input type="text" id="soChiaHetCho3" class="form-control d-block">
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="exercise-03" role="tabpanel">
+                        <h2>Tìm số nguyên dương nhỏ nhất</h2>
+                        <form>
+                            <button type="button" class="btn btn-primary my-2" id="timSoNhoNhat">Xem Kết Quả</button>
+                            <input type="text" id="soNhoNhat" class="d-block form-control">
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="exercise-04" role="tabpanel">
+                        <h2>Tính tổng</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input type="number" class="form-control" id="soX" placeholder="Nhập số x">
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" class="form-control" id="soN" placeholder="Nhập số n">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary my-2" id="tinhTong">Tính tổng</button>
+                            <input type="text" id="sum" class="form-control d-block">
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="exercise-05" role="tabpanel">
+                        <h2>Tính giai thừa</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input type="number" class="form-control" id="soGiaiThua" placeholder="Nhập số n">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary my-2" id="tinhGiaiThua">Tính</button>
+                            <input type="text" id="giaiThua" class="form-control d-block">
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="exercise-06" role="tabpanel">
+                        <h2>Tạo thẻ div</h2>
+                        <form>
+                            <button type="button" class="btn btn-primary my-2" id="taoTheDiv">Tạo thẻ</button>
+                            <div class="alert alert-success my-0" id="theDiv"></div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="exercise-07" role="tabpanel">
+                        <h2>Tạo thẻ div</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input type="number" class="form-control" id="soNBaiTap7" placeholder="Nhập số n">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary my-2" id="inSoNguyenTo">In Số</button>
+                            <div class="alert alert-success px-1 py-2" id="soNguyenTo"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BS4 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
