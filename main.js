@@ -34,3 +34,13 @@ function demSoDuong() {
     }
     document.querySelector("#ketQuaSoDuong").innerHTML = "Số dương: " + count;
 }
+
+function timSoNhoNhat() {
+    var soMin = numArr[0];
+    for (i = 1; i < numArr.length; i++) {
+        if (numArr[i] < soMin) {
+            soMin = numArr[i]
+        }
+    }
+    document.querySelector("#soNhoNhat").innerHTML = "Số nhỏ nhất: " + soMin;
+}
