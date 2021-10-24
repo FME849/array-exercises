@@ -5,11 +5,7 @@ var numArr = [];
 function themPhanTu() {
     var phanTu = Number(document.querySelector("#phanTuMang").value);
     numArr.push(phanTu);
-    if (numArr.length == 1) {
-        document.querySelector("#mangArray").innerHTML+= " " + phanTu;
-    } else {
-        document.querySelector("#mangArray").innerHTML+= ", " + phanTu;
-    }
+    document.querySelector("#mangArray").innerHTML = "Mảng: " + numArr;
 }
 document.querySelector("#themPhanTuMang").onclick = themPhanTu;
 
@@ -96,5 +92,20 @@ function timSoChanCuoiCung() {
             soChan = numArr[i];
         }
     }
-    document.querySelector("#soChanCuoiCung").innerHTML = "Số chẵn cuối cung: " + soChan;
+    document.querySelector("#soChanCuoiCung").innerHTML = "Số chẵn cuối cùng: " + soChan;
+}
+
+// Ex 06
+function doiCho() {
+    var temp = 0;
+    var viTri1 = Number(document.querySelector("#viTriThu1").value);
+    var viTri2 = Number(document.querySelector("#viTriThu2").value);
+    if (viTri1 < numArr.length && viTri2 < numArr.length) {
+        temp = numArr[viTri1];
+        numArr[viTri1] = numArr[viTri2];
+        numArr[viTri2] = temp;
+        document.querySelector("#mangDaDoiCho").innerHTML = "Mảng sau khi đổi: " + numArr;
+    } else {
+        alert("Vui lòng nhập vị trí nhỏ hơn " + numArr.length);
+    }
 }

@@ -86,10 +86,19 @@
                         </form>
                     </div>
                     <div class="tab-pane fade" id="exercise-06" role="tabpanel">
-                        <h2>Tạo thẻ div</h2>
+                        <h2>Đổi chỗ</h2>
                         <form>
-                            <button type="button" class="btn btn-primary my-2" id="taoTheDiv">Tạo thẻ</button>
-                            <div class="alert alert-success my-0" id="theDiv"></div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="viTriThu1" placeholder="Nhập vị trí thứ 1">
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="viTriThu2" placeholder="Nhập vị trí thứ 2">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary my-2" onclick=doiCho()>Đổi chỗ</button>
+                            <div class="alert alert-success py-2" id="mangDaDoiCho">
+                            </div>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="exercise-07" role="tabpanel">
