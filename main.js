@@ -97,15 +97,36 @@ function timSoChanCuoiCung() {
 
 // Ex 06
 function doiCho() {
-    var temp = 0;
+    var newArr = [];
+    for (var i = 0; i < numArr.length; i++) {
+        newArr[i] = numArr[i];
+    }
     var viTri1 = Number(document.querySelector("#viTriThu1").value);
     var viTri2 = Number(document.querySelector("#viTriThu2").value);
-    if (viTri1 < numArr.length && viTri2 < numArr.length) {
-        temp = numArr[viTri1];
-        numArr[viTri1] = numArr[viTri2];
-        numArr[viTri2] = temp;
-        document.querySelector("#mangDaDoiCho").innerHTML = "Mảng sau khi đổi: " + numArr;
+    if (viTri1 < newArr.length && viTri2 < newArr.length) {
+        var temp = numArr[viTri1];
+        newArr[viTri1] = newArr[viTri2];
+        newArr[viTri2] = temp;
+        document.querySelector("#mangDaDoiCho").innerHTML = "Mảng sau khi đổi: " + newArr;
     } else {
         alert("Vui lòng nhập vị trí nhỏ hơn " + numArr.length);
     }
+}
+
+// Ex 07
+function sapXepTangDan() {
+    var newArr = [];
+    for (var i = 0; i < numArr.length; i++) {
+        newArr[i] = numArr[i];
+    }
+    for (var i = 0; i < newArr.length; i++) {
+        for (var j = 0; j < newArr.length - 1; j++){
+            if (newArr[j] > newArr[j + 1]) {
+                var temp = newArr[j];
+                newArr[j] = newArr[j + 1];
+                newArr[j + 1] = temp;
+            }
+        }
+    }
+    document.querySelector("#mangDaSapXep").innerHTML = "Mảng sau khi sắp xếp: " + newArr;
 }
