@@ -87,3 +87,14 @@ function timSoDuongNhoNhat() {
         document.querySelector("#soDuongNhoNhat").innerHTML = "Không có số dương trong mảng";
     }
 }
+
+// Ex 05
+function timSoChanCuoiCung() {
+    var soChan = 0;
+    for (var i = 0; i < numArr.length; i++) {
+        if ((numArr[i])%2 == 0) {
+            soChan = numArr[i];
+        }
+    }
+    document.querySelector("#soChanCuoiCung").innerHTML = "Số chẵn cuối cung: " + soChan;
+}
