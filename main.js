@@ -130,3 +130,28 @@ function sapXepTangDan() {
     }
     document.querySelector("#mangDaSapXep").innerHTML = "Mảng sau khi sắp xếp: " + newArr;
 }
+
+// Ex 08
+function timSoNguyenTo() {
+    var soNguyenTo = 0;
+    for (var i = 0; i < numArr.length; i++) {
+        if (numArr[i] > 0){
+            var canBacHai = Math.floor(Math.sqrt(numArr[i]));
+            if (canBacHai <= 1) {
+                soNguyenTo = numArr[i];
+                return document.querySelector("#soNguyenTo").innerHTML = soNguyenTo;
+            } else {
+                for (j = 2; j <= canBacHai; j++) {
+                    if ((numArr[i]%j) == 0) {
+                        break;
+                    } else if (j == canBacHai && (numArr[i]%j) != 0) {
+                        soNguyenTo = numArr[i]; 
+                        return document.querySelector("#soNguyenTo").innerHTML = soNguyenTo;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+        }
+    }
+}
