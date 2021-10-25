@@ -154,4 +154,24 @@ function timSoNguyenTo() {
             }
         }
     }
+    if (soNguyenTo == 0) {
+        document.querySelector("#soNguyenTo").innerHTML = -1;
+    }
+}
+
+// Ex 09
+var numArrBai9 = [];
+function themPhanTuBai9() {
+    var phanTu = Number(document.querySelector("#phanTuMangBai9").value);
+    numArrBai9.push(phanTu);
+    document.querySelector("#mangArrayBai9").innerHTML = "Mảng: " + numArrBai9;
+}
+function timSoNguyen() {
+    var count = 0;
+    for (var i = 0; i < numArrBai9.length; i++) {
+        if (Number.isInteger(numArrBai9[i])) {
+            count+= 1;
+        }
+    }
+    document.querySelector("#soNguyen").innerHTML = "Số nguyên: " + count;
 }
