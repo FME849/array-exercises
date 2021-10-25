@@ -175,3 +175,21 @@ function timSoNguyen() {
     }
     document.querySelector("#soNguyen").innerHTML = "Số nguyên: " + count;
 }
+
+// Ex 10
+function soSanhAmDuong() {
+    var soAm = 0;
+    for (var i = 0; i < numArr.length; i++) {
+        if (numArr[i] < 0) {
+            soAm+= 1;
+        }
+    }
+    var soDuong = numArr.length - soAm;
+    if (soAm == soDuong) {
+        document.querySelector("#ketQuaSoSanh").innerHTML = "Số Âm = Số Dương";
+    } else if (soAm < soDuong) {
+        document.querySelector("#ketQuaSoSanh").innerHTML = "Số Âm < Số Dương";
+    } else {
+        document.querySelector("#ketQuaSoSanh").innerHTML = "Số Âm > Số Dương";
+    }
+}
